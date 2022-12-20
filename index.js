@@ -4,6 +4,7 @@ let nav = document.querySelector('nav');
 let divElements = document.querySelectorAll('body>div');
 let heIsWatching = document.getElementById('heIsWatching');
 let lines = document.querySelectorAll('#heIsWatching *');
+let anchors = document.querySelectorAll('submenu *')
 
 let textDivs = [].slice.call(divElements);
 textDivs = textDivs.reduce((acc, ele, ind) => {
@@ -12,10 +13,16 @@ textDivs = textDivs.reduce((acc, ele, ind) => {
 }, []);
 console.log(textDivs);
 let width =  window.innerWidth+(window.innerWidth*(divElements.length-1))*0.6;
+let anchorArr = []
+divElements.forEach((cur, ind) => {
+    if (ind%2===0) {
+        anchorArr.push(window.innerWidth+(window.innerWidth*ind/2*0.6)-window.innerWidth*0.2)
+    }
+})
 
 
 body.style.width = width;
-//scrollbardiv.style.width = window.innerWidth*divElements.length
+
 
 
 
@@ -47,14 +54,24 @@ lines.forEach(h2 => {
             tempEle.style.color = "#ddd";
             tempEle.style.textShadow = "-1px 1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000, -1px -1px 0 #000";
         }
-        else if (random <= 4) tempEle.textContent = "Ignorance Is Strength ";
-        else if (random <= 8) tempEle.textContent = "War Is Peace ";
-        else if (random <= 12) tempEle.textContent = "Freedom Is Slavery ";
+        else if (random <= 3) tempEle.textContent = "Ignorance Is Strength ";
+        else if (random <= 6) tempEle.textContent = "War Is Peace ";
+        else if (random <= 9) tempEle.textContent = "Freedom Is Slavery ";
+        else if (random <= 12) {
+            tempEle.textContent = "Remember Remember The Fifth of November "
+            tempEle.style.color = "#64001D"
+        }
         else tempEle.textContent = "Big Brother Is Watching ";
         h2.appendChild(tempEle);
     }
 });
 
+anchors.forEach((ele, ind) => {
+    ele.addEventListener('mousedown', event => {
+        body.scrollLeft = anchorArr[ind]
+
+    })
+})
 
 window.addEventListener('scroll', event => {
    position.style.setProperty('--x', `${body.scrollLeft*0.1}px`);
@@ -67,14 +84,19 @@ addEventListener('resize', resize => {
     body.style.width = width;
     heIsWatching.style.width = window.innerWidth;
     heIsWatching.style.marginLeft = 0;
-    divElements.forEach(ele => {
+    anchorArr = []
+    divElements.forEach((ele, ind) => {
         ele.style.width = window.innerWidth*0.6;
+        if (ind%2===0) {
+            anchorArr.push(window.innerWidth+(window.innerWidth*ind/2*0.6))
+        }
     });
     divElements[0].style.width = window.innerWidth;
     
 
 });
 
+console.log(anchorArr)
 
 
 
