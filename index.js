@@ -4,7 +4,8 @@ let nav = document.querySelector('nav');
 let divElements = document.querySelectorAll('body>div');
 let heIsWatching = document.getElementById('heIsWatching');
 let lines = document.querySelectorAll('#heIsWatching *');
-let anchors = document.querySelectorAll('submenu *')
+let anchors = document.querySelectorAll('submenu a')
+let icon = document.querySelector('menu>a')
 
 let textDivs = [].slice.call(divElements);
 textDivs = textDivs.reduce((acc, ele, ind) => {
@@ -16,7 +17,7 @@ let width =  window.innerWidth+(window.innerWidth*(divElements.length-1))*0.6;
 let anchorArr = []
 divElements.forEach((cur, ind) => {
     if (ind%2===0) {
-        anchorArr.push(window.innerWidth+(window.innerWidth*ind/2*0.6)-window.innerWidth*0.2)
+        anchorArr.push(window.innerWidth+(window.innerWidth*ind*0.6)-window.innerWidth*0.2)
     }
 })
 
@@ -69,9 +70,15 @@ lines.forEach(h2 => {
 anchors.forEach((ele, ind) => {
     ele.addEventListener('mousedown', event => {
         body.scrollLeft = anchorArr[ind]
+      
 
     })
+    consoleDiv.textContent = anchors.length
 })
+
+icon.addEventListener('mousedown', event => {
+        body.scrollLeft = 0
+    })
 
 window.addEventListener('scroll', event => {
    position.style.setProperty('--x', `${body.scrollLeft*0.1}px`);
@@ -88,15 +95,13 @@ addEventListener('resize', resize => {
     divElements.forEach((ele, ind) => {
         ele.style.width = window.innerWidth*0.6;
         if (ind%2===0) {
-            anchorArr.push(window.innerWidth+(window.innerWidth*ind/2*0.6))
+            anchorArr.push(window.innerWidth+(window.innerWidth*ind*0.6))
         }
     });
     divElements[0].style.width = window.innerWidth;
     
 
 });
-
-console.log(anchorArr)
 
 
 
