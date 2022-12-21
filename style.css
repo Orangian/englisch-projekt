@@ -39,13 +39,15 @@ body>div:first-of-type>div:first-of-type {height: 100%; width: 100%; display: fl
 
 /*the styling and moving of all the background text stuff*/
 #heIsWatching {overflow-y: hidden; overflow-x: hidden; white-space: nowrap; position: fixed; background-size: contain; z-index: -99;}
-#heIsWatching h2 {margin: 0; transform: skewY(345deg) translateY(-200px) translateX(calc(var(--i)*100px*-1 - var(--x)*2*var(--i))); font-size: 50px; white-space: nowrap; z-index: -99; font-family: 'Chivo Mono'}
+#heIsWatching h2 {margin: 0; transform: skewY(345deg) translateY(-225px) translateX(calc(var(--i)*100px*-1 - var(--x)*2*var(--i))); font-size: 50px; white-space: nowrap; z-index: -99; font-family: 'Chivo Mono'}
 #heIsWatching h2 span:nth-of-type(2n) {color: #C70039; }
 
 
-
-
-
+/*regular content stuff*/
+.text div:not(.eye) {display: flex; align-items: center; justify-content: center; flex-grow: 1; flex-direction: column;}
+.text div a {text-decoration: none; color: black; font-family: 'Kdam Thmor Pro'; border: #C70039 solid 4px; border-radius: 10px; padding: 10px; font-size: 40px; box-shadow: 3px 3px 0px black;}
+.text div p {font-family: 'Garamond'; color: black; font-size: 60px; margin: 0}
+.text div a:hover {background-color:#C70039; border-color:#900C3F; box-shadow: 3px 3px 0px inset black, 3px 3px 0px black; color: white}
 
 /*menu styling that i copy pasted from google*/
 .material-symbols-outlined {

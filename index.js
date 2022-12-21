@@ -82,7 +82,7 @@ icon.addEventListener('mousedown', event => {
 
 window.addEventListener('scroll', event => {
    position.style.setProperty('--x', `${body.scrollLeft*0.1}px`);
-   //consoleDiv.textContent = 1/(body.scrollLeft/width);
+   //consoleDiv.textContent = 1/(body.scrollLeft/width); //this line is a calculation for the ratio in the css at which to display shadow so don't delete it
   
 });
 
@@ -95,14 +95,20 @@ addEventListener('resize', resize => {
     divElements.forEach((ele, ind) => {
         ele.style.width = window.innerWidth*0.6;
         if (ind%2===0) {
-            anchorArr.push(window.innerWidth+(window.innerWidth*ind*0.6))
+            anchorArr.push(window.innerWidth+(window.innerWidth*ind*0.6)-window.innerWidth*0.2)
         }
     });
     divElements[0].style.width = window.innerWidth;
     
 
 });
-
+let href =window.location.href.replace(/.*\?/, '')
+params = new URLSearchParams(href)
+try {
+    body.scrollLeft = anchorArr[parseInt(params.get('anchorNum'))] //anchornum is basically the content page number u want to reference in the content htmls refer to stuff like index.html?anchorNum=1 and it will link to the first anchor
+} catch {
+    console.log('not a valid input')
+}
 
 
 
