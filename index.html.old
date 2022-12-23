@@ -1,0 +1,73 @@
+<html>
+  
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Diplomata%20SC|Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200|Roboto%20Slab|Kdam%20Thmor%20Pro|Roboto%20Mono|EB%20Garamond|Playfair%20Display|Chivo%20Mono">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <backgroundtext id="heIsWatching">
+            <h2 style="--i:0.5"></h2>
+            <h2 style="--i:1"></h2>
+            <h2 style="--i:1.1"></h2>
+            <h2 style="--i:1.5"></h2>
+            <h2 style="--i:1.2"></h2>
+            <h2 style="--i:1.4"></h2>
+            <h2 style="--i:0.5"></h2>
+            <h2 style="--i:0.8"></h2>
+            <h2 style="--i:1.3"></h2>
+            <h2 style="--i:1.4"></h2>
+            <h2 style="--i:1.5"></h2>
+            <h2 style="--i:1.1"></h2>
+            <h2 style="--i:0.8"></h2>
+            <h2 style="--i:1.3"></h2>
+            <h2 style="--i:1.7"></h2>
+            <h2 style="--i:1.1"></h2>
+            <h2 style="--i:1.9"></h2>
+            <h2 style="--i:1.4"></h2>
+            <h2 style="--i:0.6"></h2>
+            <h2 style="--i:1.7"></h2>
+            <h2 style="--i:1"></h2>
+            <h2 style="--i:1.4"></h2>
+            <h2 style="--i:0.7"></h2>
+            <h2 style="--i:0.6"></h2>
+            
+    </backgroundtext>
+    <nav><p>By Nikita Ostapenko, Ty Sayahi, Kai Chong </p><menu><a href="#titleanchor"><span class="material-symbols-outlined">menu</span></a>
+    <submenu>
+      <a><span>Bottom Text</span></a>
+      <a><span>Top Text</span></a>
+      <a><span>i forgor text</span></a>
+      <a><span>aaaa text</span></a>
+      </submenu>
+      </menu>
+    </nav>
+    <div id="titleanchor">
+        <div>
+          <div id="title">
+            <p>The Rise of Authoritarianism in the World and its Effect on 1984 and V for Vendetta</p>
+            <figure class="eye"></figure>
+          </div>
+        </div>
+  
+        
+    </div>
+    <div class="text"><div class="eye"></div><div><p>Click To View:</p><a href="contenttemplate.html">Example Content Page</a></div></div>
+    <div></div>
+    <div class="text"><div class="eye"></div>top text</div>
+    <div></div>
+    <div class="text"><div class="eye"></div>i forgor text</div>
+    <div></div>
+    <div class="text"><div class="eye"></div>aaaaaaa</div>
+    <div></div>
+    <console id="console">empty console</console>
+
+    <script src="index.js"></script>
+  </body>
+</html>
+
+
+
+
+
+

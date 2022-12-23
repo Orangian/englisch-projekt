@@ -42,7 +42,7 @@ nav.style.setProperty('--horizwidth', width);
 
 
 window.addEventListener('wheel', event => {
-  event.preventDefault();
+  //event.preventDefault(); This causes infinite errors as one scrolls in Chrome, severely degrading performance. Firefox simply ignores this, as it sees that it is invalid.
   body.scrollLeft += event.deltaY;
 });
 
