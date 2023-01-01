@@ -79,7 +79,10 @@ body>div:first-of-type>div:first-of-type {height: 100%; width: 100%; display: fl
 
 
 
-
+body {
+    overflow: scroll;
+    overflow-x: hidden;
+}
 
 
 
