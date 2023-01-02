@@ -1,10 +1,8 @@
 body {
     margin: 0; 
     padding: 0; 
-    overflow-x: hidden; 
     display:flex; 
     flex-direction: row; 
-    overflow: hidden; 
     background-color: #D8BF65;
 }
 
@@ -20,7 +18,7 @@ nav {
     width: 100%; 
     overflow-x: hidden; 
     overflow-y: hidden; 
-    box-shadow: calc(var(--x)*10*var(--pagewidth)/var(--horizwidth)*1.208347264656713) 0px 0px inset #900C3F, 4px 4px 0px black ; 
+    box-shadow: calc(var(--x)*10*var(--pagewidth)/var(--horizwidth)*1.4166666666666665) 0px 0px inset #900C3F, 4px 4px 0px black ; 
     display:flex; 
     justify-content: flex-end;
 }
@@ -64,7 +62,7 @@ menu submenu a {
     justify-content: center; 
     margin: 0; 
     height: 100%; 
-    width: 100px; 
+    width: 200px; 
     opacity: 0; 
     z-index: 1; 
     text-decoration: none; 
@@ -162,7 +160,7 @@ body>div:first-of-type>div:first-of-type {
 }
 
 #title .eye {
-    background-position: center 78%;
+    background-position: center 65%;
 }
 
 .text {
@@ -178,9 +176,11 @@ body>div:first-of-type>div:first-of-type {
     box-sizing: border-box; 
     border-radius: 10px; 
     font-weight: 100;
+    padding: 30px; 
+    box-sizing: border-box;
 }
 
-.text .eye {background-position: center -25px; margin-top: 50px; width: 80%;}
+.text .eye {background-position: center 25%; margin-top: 50px; width: 80%;}
 
 /*the styling and moving of all the background text stuff*/
 #heIsWatching {
@@ -223,9 +223,11 @@ body>div:first-of-type>div:first-of-type {
     padding: 10px; 
     font-size: 40px; 
     box-shadow: 3px 3px 0px black;
+    text-align: center;
 }
 
 .text div p {
+    padding-bottom: 20px;
     font-family: 'Garamond'; 
     color: black; 
     font-size: 60px; 

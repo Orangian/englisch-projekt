@@ -82,7 +82,7 @@ icon.addEventListener('mousedown', event => {
 
 window.addEventListener('scroll', event => {
    position.style.setProperty('--x', `${body.scrollLeft*0.1}px`);
-   //consoleDiv.textContent = 1/(body.scrollLeft/width); //this line is a calculation for the ratio in the css at which to display shadow so don't delete it
+   //console.log(1/(body.scrollLeft/width)); //this line is a calculation for the ratio in the css at which to display shadow so don't delete it
   
 });
 
