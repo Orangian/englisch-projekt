@@ -1,4 +1,4 @@
-let consoleDiv = document.getElementById('console');
+//let consoleDiv = document.getElementById('console');
 let body = document.body;
 let nav = document.querySelector('nav');
 let divElements = document.querySelectorAll('body>div');
@@ -107,7 +107,7 @@ params = new URLSearchParams(href)
 try {
     body.scrollLeft = anchorArr[parseInt(params.get('anchorNum'))] //anchornum is basically the content page number u want to reference in the content htmls refer to stuff like index.html?anchorNum=1 and it will link to the first anchor
 } catch {
-    console.log('not a valid input')
+//    console.log('not a valid input')
 }
 
 
