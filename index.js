@@ -1,4 +1,4 @@
-let consoleDiv = document.getElementById('console');
+// let consoleDiv = document.getElementById('console');
 let body = document.body;
 let nav = document.querySelector('nav');
 let divElements = document.querySelectorAll('body>div');
@@ -12,7 +12,7 @@ textDivs = textDivs.reduce((acc, ele, ind) => {
     if (ind%2 === 1) acc.push(ele);
     return acc;
 }, []);
-console.log(textDivs);
+//console.log(textDivs);
 let width =  window.innerWidth+(window.innerWidth*(divElements.length-1))*0.6;
 let anchorArr = []
 divElements.forEach((cur, ind) => {
@@ -73,7 +73,7 @@ anchors.forEach((ele, ind) => {
       
 
     })
-    consoleDiv.textContent = anchors.length
+//    consoleDiv.textContent = anchors.length
 })
 
 icon.addEventListener('mousedown', event => {

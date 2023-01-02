@@ -1,36 +1,14 @@
-/*
-
-console {
-    display: none; 
-    z-index: 99; 
-    font-family: 'Roboto Mono';
-    position: fixed; 
-    bottom: 0px; 
-    width: 100%; 
-    height: 10%; 
-    font-family: sans; 
-    background-color: black; 
-    color: white; 
-    padding: 10px; 
-    font-size: 15px; 
-    border-top: white solid 2px
-}
-bootleg console because those frickers disabled inspect on chromebooks set display to none to disable
+console {display: none; z-index: 99; font-family: 'Roboto Mono';position: fixed; bottom: 0px; width: 100%; height: 10%; font-family: sans; background-color: black; color: white; padding: 10px; font-size: 15px; border-top: white solid 2px}
+/*bootleg console because those frickers disabled inspect on chromebooks set display to none to disable
  in case any of you want to do this on your chromebook:
  -install the caret extension
  -copy paste code from github into new files
  -open up the file in chrome
  -theres no ctrl shift i or terminal so ur gonna have to commit manually
- -if you want a console just set display to flex and instead of console.log use console.textContent in the js
+ -if you want a console just set display to flex and instead of console.log use console.textContent in the js*/
 
-dont care didn't ask - ty
-
-*/
-
-
-
-body {margin: 0; padding: 0; overflow-x: scroll; display:flex; flex-direction: row; overflow: scroll; background-color: #D8BF65  }
-nav {height: 50px; color: white; position: fixed; top: 0px; z-index: 50; background-color: #C70039; border-bottom: black solid 1px; overflow-x: scroll; width: 100%; overflow-x: scroll; overflow-y: hidden; box-shadow: calc(var(--x)*10*var(--pagewidth)/var(--horizwidth)*1.208347264656713) 0px 0px inset #900C3F, 4px 4px 0px black ; display:flex; justify-content: flex-end}
+body {margin: 0; padding: 0; overflow-x: hidden; display:flex; flex-direction: row; overflow: hidden; background-color: #D8BF65  }
+nav {height: 50px; color: white; position: fixed; top: 0px; z-index: 50; background-color: #C70039; border-bottom: black solid 1px; overflow-x: hidden; width: 100%; overflow-x: hidden; overflow-y: hidden; box-shadow: calc(var(--x)*10*var(--pagewidth)/var(--horizwidth)*1.208347264656713) 0px 0px inset #900C3F, 4px 4px 0px black ; display:flex; justify-content: flex-end}
 nav p {position: fixed; left: 15px; font-family: 'Kdam Thmor Pro'; font-weight: 1000; height: 50px; top: -5px}
 
 /*Menu styles that are probably very innefective and repeating but it works*/
@@ -79,10 +57,7 @@ body>div:first-of-type>div:first-of-type {height: 100%; width: 100%; display: fl
 
 
 
-body {
-    overflow: scroll;
-    overflow-x: hidden;
-}
+
 
 
 
