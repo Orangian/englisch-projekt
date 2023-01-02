@@ -1,4 +1,4 @@
-//let consoleDiv = document.getElementById('console');
+let consoleDiv = document.getElementById('console');
 let body = document.body;
 let nav = document.querySelector('nav');
 let divElements = document.querySelectorAll('body>div');
